@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient - Medicine Reminder System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Medicine Reminder System</h1>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="add-patient.html" class="active">Add Patient</a>
+                <a href="add-doctor.html">Add Doctor</a>
+                <a href="add-medicine.html">Add Medicine</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Add New Patient</h2>
+
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <div id="success-message" class="success-message" style="display: none;"></div>
+
+            <form id="patient-form">
+                <div class="form-group">
+                    <label for="name">Patient Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" name="age" required min="1" max="150">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="medical_history">Medical History</label>
+                    <textarea id="medical_history" name="medical_history" rows="4" placeholder="Any allergies, chronic conditions, past surgeries, etc."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Add Patient</button>
+                    <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/patient.js"></script>
+</body>
+</html>

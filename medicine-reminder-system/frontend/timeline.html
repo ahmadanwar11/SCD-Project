@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Medicine Reminder System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Medicine Reminder System</h1>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="add-patient.html">Add Patient</a>
+                <a href="add-doctor.html">Add Doctor</a>
+                <a href="add-medicine.html">Add Medicine</a>
+                <a href="timeline.html" class="active">Timeline</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="timeline-header">
+            <h2>Medicine Reminder Timeline</h2>
+            <p>All your upcoming medicine reminders in chronological order</p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <!-- Filter Options -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="status-filter">Filter by Status:</label>
+                <select id="status-filter">
+                    <option value="all">All Reminders</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                    <option value="missed">Missed</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Timeline View -->
+        <div class="timeline-container" id="timeline-container">
+            <p class="empty-message">Loading reminders...</p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>

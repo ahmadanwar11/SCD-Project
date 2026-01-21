@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Medicine Reminder System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>Medicine Reminder System</h1>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="add-patient.html">Add Patient</a>
+                <a href="add-doctor.html">Add Doctor</a>
+                <a href="add-medicine.html">Add Medicine</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Welcome, <span id="username"></span>!</h2>
+            <p>Manage your medicine reminders efficiently</p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="patient-count">0</h3>
+                <p>Patients</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="doctor-count">0</h3>
+                <p>Doctors</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="medicine-count">0</h3>
+                <p>Total Medicines</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="reminder-count">0</h3>
+                <p>Today's Reminders</p>
+            </div>
+        </div>
+
+        <!-- Patients Section -->
+        <div class="section">
+            <h3>My Patients</h3>
+            <div id="patients-list" class="cards-grid">
+                <p class="empty-message">No patients added yet. <a href="add-patient.html">Add your first patient</a></p>
+            </div>
+        </div>
+
+        <!-- Doctors Section -->
+        <div class="section">
+            <h3>Assigned Doctors</h3>
+            <div id="doctors-list" class="cards-grid">
+                <p class="empty-message">No doctors assigned yet. <a href="add-doctor.html">Add a doctor</a></p>
+            </div>
+        </div>
+
+        <!-- Today's Reminders Section -->
+        <div class="section">
+            <h3>Today's Medicine Reminders</h3>
+            <div id="today-reminders" class="reminders-list">
+                <p class="empty-message">No reminders for today</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
